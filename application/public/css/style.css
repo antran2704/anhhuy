@@ -89,6 +89,13 @@ h4,
     font-family: "BeVietNamPro";
 }
 
+h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
 .btn {
     padding-top: 12px;
     padding-bottom: 12px;
