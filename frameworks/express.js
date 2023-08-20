@@ -19,8 +19,7 @@ export default function expressConfig(app, express) {
 
     // Static Files
     app.set('views', path.join(__dirname, '../application/views'));
-    app.use(express.static(__dirname + '../application/public'));
-    app.use('/css', express.static(__dirname + '../application/public/css'));
+    app.use(express.static(__dirname + '../../application/public'));
 
     app.use(bodyParser.json({ limit: '50mb' }));
     app.use(
