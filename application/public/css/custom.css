@@ -1,12 +1,90 @@
+main {
+    padding-top: 124px;
+}
+
+.main-content {
+    padding: 100px 64px;
+}
+
+.main-content-left {
+    display: flex;
+}
+
+.main-content-right {
+    display: flex;
+}
+
+.main-title {
+    color: #FD6829;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+}
+
+.main-sub-text {
+    color: #1C1C22;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.main-text-gray {
+    color: rgba(1, 18, 34, 0.50);
+}
+
+@media (max-width:992px) {
+    main {
+        padding-top: 103px;
+    }
+
+    .main-content {
+        padding: 56px 56px;
+    }
+
+    .main-content-left {
+        display: inline-block;
+    }
+
+    .main-content-right {
+        display: inline-block;
+    }
+
+    .main-title {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    .main-sub-text {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    main {
+        padding-top: 86px;
+    }
+
+    .main-content {
+        padding: 56px 16px;
+    }
+}
+
 .partial-contact-us {
-    background: url('../image/bg-contactus.png'), lightgray 0px -566.913px / 100% 305.831% no-repeat;
+    background: url('../image/bg-contactus.png'), no-repeat;
     padding: 100px 160px;
+    background-position: center 60%;
 }
 
 .partial-contact-us .contact-us-content {
     background-color: #1C1C22;
     border-radius: 40px;
     padding-left: 0;
+    margin: 2px;
 }
 
 .partial-contact-us .contact-us-content .content-left {
@@ -149,5 +227,35 @@
 
     h3 {
         font-size: 16px;
+    }
+}
+
+.contact-content-img {
+    width: 100%;
+}
+
+.contact-top-content {
+    padding-right: 64px;
+    margin: auto;
+}
+
+.contact-center-content {
+    padding-left: 64px;
+    margin: auto;
+}
+
+
+@media (max-width:992px) {
+
+    .contact-top-content {
+        padding-right: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-center-content {
+        padding-left: 0;
+        margin: 0;
+        text-align: center;
     }
 }

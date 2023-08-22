@@ -1,12 +1,14 @@
 //import controller
-import homeController from './home.js';
+import contactRouter from './contact.js';
+import homeRouter from './home.js';
 
 //import api
 import userApiRouter from './userApi.js';
 
 export default function routes(app, express) {
     //controller
-    app.use('/', homeController(express));
+    app.use('/', homeRouter(express));
+    app.use('/contact', contactRouter(express));
 
     //api
     app.use('/api/user', userApiRouter(express));

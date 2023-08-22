@@ -258,6 +258,13 @@ h3 {
     padding: 40px 64px;
 }
 
+@media (max-width: 991.98px) {
+
+    .site-nav {
+        padding: 32px 56px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .site-nav {
         padding: 24px 16px;
@@ -477,7 +484,7 @@ h3 {
     width: 30px;
     z-index: 99;
     cursor: pointer;
-    top: 10px;
+    top: 0;
     right: 30px;
 }
 
@@ -1902,7 +1909,7 @@ h3 {
 .site-footer .inner {
     width: 100%;
     padding-top: 0px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     background: #f8f9fa;
 }
 
@@ -1927,7 +1934,7 @@ h3 {
 @media (max-width: 991.98px) {
 
     .site-footer {
-        padding-top: 30px;
+        /* padding-top: 30px; */
         font-size: 14px;
     }
 
@@ -2034,6 +2041,13 @@ h3 {
 
 .custom-contact-footer {
     padding: 64px;
+}
+
+@media(max-width:991.98px) {
+
+    .custom-contact-footer {
+        padding: 56px;
+    }
 }
 
 .custom-img-footer {
