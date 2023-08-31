@@ -1,0 +1,89 @@
+$orange: #fd6829;
+
+@mixin lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+// custome width
+
+.w-full {
+  width: 100%;
+}
+
+@for $i from 1 through 9 {
+  .w-#{$i}0 {
+    width: $i * 10%;
+  }
+}
+
+@for $i from 1 through 9 {
+  @include lg {
+    .w-lg-#{$i}0 {
+      width: $i * 10%;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include md {
+    .w-md-#{$i}0 {
+      width: $i * 10%;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  @include sm {
+    .w-sm-#{$i}0 {
+      width: $i * 10%;
+    }
+  }
+}
+// custome padding
+
+.padding-top {
+  padding-top: 100px;
+
+  @include md() {
+    padding-top: 160px;
+  }
+}
+
+// custome text
+.text-orange {
+  color: $orange;
+}
+
+// custome background
+.bg-orange {
+  background-color: $orange;
+}
+
+// custome image
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.ratio {
+  aspect-ratio: 16/9;
+}
