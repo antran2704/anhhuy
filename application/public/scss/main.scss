@@ -1,4 +1,17 @@
+$title: #1c1c22;
+$desc: #0112227f;
 $orange: #fd6829;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+}
 
 @mixin lg {
   @media screen and (min-width: 992px) {
@@ -58,7 +71,7 @@ $orange: #fd6829;
 .padding-top {
   padding-top: 100px;
 
-  @include md() {
+  @include lg() {
     padding-top: 160px;
   }
 }
@@ -66,6 +79,65 @@ $orange: #fd6829;
 // custome text
 .text-orange {
   color: $orange;
+}
+
+.text-title {
+  color: $title;
+}
+
+.text-desc {
+  color: $desc;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-lg-justify {
+  @include lg() {
+    text-align: justify !important;
+  }
+}
+
+.text-md-justify {
+  @include md() {
+    text-align: justify !important;
+  }
+}
+
+.text-sm-justify {
+  @include sm() {
+    text-align: justify !important;
+  }
+}
+
+// customer font weight
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-bolder {
+  font-weight: 600;
+}
+
+.fw-semiBold {
+  font-weight: 500;
+}
+
+.fw-medium {
+  font-weight: 400;
+}
+
+.fw-normal {
+  font-weight: 300;
+}
+
+.fw-light {
+  font-weight: 200;
+}
+
+.fw-lighter {
+  font-weight: 100;
 }
 
 // custome background
@@ -86,4 +158,51 @@ $orange: #fd6829;
 
 .ratio {
   aspect-ratio: 16/9;
+}
+
+// custome flex
+.gap {
+  gap: var(--gap);
+}
+
+// avatar
+.avatar {
+  width: 64px;
+  height: 64px;
+
+  @include lg {
+    width: 120px;
+    height: 120px;
+  }
+
+  @include md {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+// timeline
+.timeline-bg {
+  background-color: #edeff0;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+}
+
+.timeline-btn {
+  background: $title;
+  color: white;
+}
+
+// swiper
+
+.swiper {
+  width: 100%;
+  height: 240px;
+}
+
+.swiper-pagination {
+    padding-top: 40px;
 }
