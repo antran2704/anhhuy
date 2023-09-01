@@ -1,6 +1,7 @@
 $title: #1c1c22;
 $desc: #0112227f;
 $orange: #fd6829;
+$gray: #e9e9e9;
 
 * {
   padding: 0;
@@ -35,6 +36,10 @@ button {
 
 .w-full {
   width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
 }
 
 @for $i from 1 through 9 {
@@ -87,6 +92,10 @@ button {
 
 .text-desc {
   color: $desc;
+}
+
+.text-gray {
+  color: $gray;
 }
 
 .text-justify {
@@ -145,6 +154,10 @@ button {
   background-color: $orange;
 }
 
+.bg-gray {
+  background-color: $gray;
+}
+
 // custome image
 .object-fit-cover {
   object-fit: cover;
@@ -158,6 +171,11 @@ button {
 
 .ratio {
   aspect-ratio: 16/9;
+}
+
+// custome cursor
+.cursor-pointer {
+  cursor: pointer;
 }
 
 // custome flex
@@ -181,6 +199,13 @@ button {
   }
 }
 
+// cus swiper
+.swiper {
+  .swiper-pagination-bullet-active {
+    background-color: $orange;
+  }
+}
+
 // timeline
 .timeline-bg {
   background-color: #edeff0;
@@ -196,13 +221,116 @@ button {
   color: white;
 }
 
-// swiper
-
-.swiper {
+// cus swiper timeline
+.timeline.swiper {
   width: 100%;
-  height: 240px;
+  overflow: visible;
 }
 
 .swiper-pagination {
-    padding-top: 40px;
+  transform: translateY(40px);
+}
+
+// why us
+.why {
+  .why__bg {
+    height: 700px;
+    background-image: url("/image/tu-van-maketing/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .why__content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include md {
+      left: 10%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .swiper-why.swiper {
+    overflow-y: visible;
+  }
+
+  .why__item {
+    min-height: 400px;
+    max-height: 400px;
+    background-image: url("/image/tu-van-maketing/bg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+  }
+}
+
+// contact
+.contact {
+  height: 700px;
+  background-image: url("/image/tu-van-maketing/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .contact__container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .contact__content {
+    border-radius: 40px;
+    overflow: hidden;
+    backdrop-filter: grayscale(0.4) blur(4px) opacity(0.8);
+  }
+
+  .contact__inp {
+    font-style: italic;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid $gray;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
+
+.swiper-blog.swiper {
+  overflow: visible;
+}
+
+// collapse
+.collapse {
+  .card {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+    .card-header {
+      background-color: white;
+      border: none;
+    }
+  }
+
+  .card-header[aria-expanded="true"] {
+    .collapse__icon-add {
+      display: none;
+    }
+    .collapse__icon-sub {
+      display: block;
+    }
+  }
+
+  .card-header[aria-expanded="false"] {
+    .collapse__icon-add {
+      display: block;
+    }
+    .collapse__icon-sub {
+      display: none;
+    }
+  }
 }

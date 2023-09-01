@@ -10,6 +10,9 @@ button {
 .w-full {
   width: 100%; }
 
+.w-fit {
+  width: fit-content; }
+
 .w-10 {
   width: 10%; }
 
@@ -160,6 +163,9 @@ button {
 .text-desc {
   color: #0112227f; }
 
+.text-gray {
+  color: #e9e9e9; }
+
 .text-justify {
   text-align: justify !important; }
 
@@ -199,6 +205,9 @@ button {
 .bg-orange {
   background-color: #fd6829; }
 
+.bg-gray {
+  background-color: #e9e9e9; }
+
 .object-fit-cover {
   object-fit: cover;
   object-position: center; }
@@ -209,6 +218,9 @@ button {
 
 .ratio {
   aspect-ratio: 16/9; }
+
+.cursor-pointer {
+  cursor: pointer; }
 
 .gap {
   gap: var(--gap); }
@@ -225,6 +237,9 @@ button {
       width: 80px;
       height: 80px; } }
 
+.swiper .swiper-pagination-bullet-active {
+  background-color: #fd6829; }
+
 .timeline-bg {
   background-color: #edeff0; }
 
@@ -236,9 +251,82 @@ button {
   background: #1c1c22;
   color: white; }
 
-.swiper {
+.timeline.swiper {
   width: 100%;
-  height: 240px; }
+  overflow: visible; }
 
 .swiper-pagination {
-  padding-top: 40px; }
+  transform: translateY(40px); }
+
+.why .why__bg {
+  height: 700px;
+  background-image: url("/image/tu-van-maketing/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.why .why__content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  @media screen and (min-width: 768px) {
+    .why .why__content {
+      left: 10%;
+      transform: translateY(-50%); } }
+
+.why .swiper-why.swiper {
+  overflow-y: visible; }
+
+.why .why__item {
+  min-height: 400px;
+  max-height: 400px;
+  background-image: url("/image/tu-van-maketing/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px; }
+
+.contact {
+  height: 700px;
+  background-image: url("/image/tu-van-maketing/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .contact .contact__container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .contact .contact__content {
+    border-radius: 40px;
+    overflow: hidden;
+    backdrop-filter: grayscale(0.4) blur(4px) opacity(0.8); }
+  .contact .contact__inp {
+    font-style: italic;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #e9e9e9; }
+    .contact .contact__inp::placeholder {
+      color: #e9e9e9; }
+
+.swiper-blog.swiper {
+  overflow: visible; }
+
+.collapse .card {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  .collapse .card .card-header {
+    background-color: white;
+    border: none; }
+
+.collapse .card-header[aria-expanded="true"] .collapse__icon-add {
+  display: none; }
+
+.collapse .card-header[aria-expanded="true"] .collapse__icon-sub {
+  display: block; }
+
+.collapse .card-header[aria-expanded="false"] .collapse__icon-add {
+  display: block; }
+
+.collapse .card-header[aria-expanded="false"] .collapse__icon-sub {
+  display: none; }
